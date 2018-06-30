@@ -1,5 +1,5 @@
 # -*- coding:utf-8 -*-
 '''
-项目配置目录
+apps目录
 '''
 __author__ = "sunsn"
