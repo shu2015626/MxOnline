@@ -32,6 +32,10 @@ ALLOWED_HOSTS = []
 
 
 # Application definition
+# 配置，模板是django支持email登录而不只是用户名
+AUTHENTICATION_BACKENDS = (
+    'users.views.CustomBackend',
+)
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -135,3 +139,8 @@ USE_TZ = False
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# 说明static文件存在的路径
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, "static"),
+)
