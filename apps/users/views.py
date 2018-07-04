@@ -49,6 +49,11 @@ def user_login(request):
         return render(request, "login.html", {})
 
 
+class RegisterView(View):
+    def get(self, request):
+        return render(request, "register.html", {})
+
+
 class LoginView(View):
     """登录类"""
     def get(self, request):

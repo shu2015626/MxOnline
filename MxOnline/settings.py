@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'operation',
     'xadmin',
     'crispy_forms',
+    'captcha',
 ]
 AUTH_USER_MODEL = 'users.UserProfile'  # 这里直接是app的名称加类名（没有那个models模块名）
 
