@@ -78,6 +78,9 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                # 是html中可以去到settings.py里配置的MEDIA_URL(在本文件的最下面)
+                # 在Django2.0里变为django.template.context_processors.media
+                'django.core.context_processors.media'
             ],
         },
     },
@@ -149,10 +152,8 @@ STATICFILES_DIRS = (
 # 设置发送邮件的相关参数
 EMAIL_HOST = "smtp.sina.com"
 EMAIL_PORT = 25
-# EMAIL_HOST_USER = "projectsedu@sina.com"
-# EMAIL_HOST_PASSWORD = 'admin123'
-EMAIL_HOST_USER = "shinansun1991@sina.cn"
-EMAIL_HOST_PASSWORD = 'xz829km@K16'
+EMAIL_HOST_USER = "projectsedu@sina.com"
+EMAIL_HOST_PASSWORD = 'admin123'
 EMAIL_USE_TLS = False
 EMAIL_FROM = EMAIL_HOST_USER
 
