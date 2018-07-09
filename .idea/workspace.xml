@@ -2,7 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e06e14e9-c634-4270-90c8-4f1dd4d06f70" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/extra_apps/pure_pagination/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/pure_pagination/locale/ru/LC_MESSAGES/django.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/pure_pagination/locale/ru/LC_MESSAGES/django.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/pure_pagination/mixins.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/pure_pagination/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/pure_pagination/paginator.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/pure_pagination/templates/pure_pagination/pagination-bootstrap.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/pure_pagination/templates/pure_pagination/pagination.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_apps/pure_pagination/tests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/MxOnline.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/MxOnline.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MxOnline/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/MxOnline/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MxOnline/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/MxOnline/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/organizations/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/organizations/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/org-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/org-list.html" afterDir="false" />
     </list>
@@ -18,11 +30,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MxOnline/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="155" column="32" selection-start-line="155" selection-start-column="32" selection-end-line="155" selection-end-column="32" />
+            <state relative-caret-position="30">
+              <caret line="17" column="70" selection-start-line="17" selection-start-column="70" selection-end-line="17" selection-end-column="70" />
               <folding>
                 <element signature="e#333#342#0" expanded="true" />
               </folding>
@@ -45,7 +57,7 @@
       <file leaf-file-name="themes.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/extra_apps/xadmin/plugins/themes.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1716">
+            <state relative-caret-position="512">
               <caret line="88" column="73" selection-start-line="88" selection-start-column="73" selection-end-line="88" selection-end-column="73" />
               <folding>
                 <element signature="e#14#51#0" expanded="true" />
@@ -54,32 +66,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apps/organizations/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="528">
-              <caret line="33" column="36" selection-start-line="33" selection-start-column="36" selection-end-line="33" selection-end-column="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apps/users/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3212">
-              <caret line="155" selection-start-line="155" selection-end-line="155" />
-              <folding>
-                <element signature="e#24#59#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="org-list.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="org-list.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/org-list.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="61" column="128" selection-start-line="61" selection-start-column="128" selection-end-line="61" selection-end-column="128" />
+            <state relative-caret-position="48">
+              <caret line="91" column="101" selection-start-line="91" selection-start-column="101" selection-end-line="91" selection-end-column="101" />
               <folding>
                 <element signature="n#block#1;n#!!top" />
               </folding>
@@ -90,16 +81,11 @@
       <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="44">
+            <state relative-caret-position="22">
               <caret line="2" column="10" selection-start-line="2" selection-end-line="2" selection-end-column="26" />
               <folding>
-                <element signature="n#head#0;n#html#0;n#!!top" />
-                <element signature="n#section#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#block#3;n#!!top" />
                 <element signature="n#block#4;n#!!top" />
-                <element signature="n#footer#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#section#3;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#script#8;n#body#0;n#html#0;n#!!top" />
               </folding>
             </state>
           </provider>
@@ -108,8 +94,8 @@
       <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MxOnline/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="149">
-              <caret line="41" selection-start-line="41" selection-end-line="41" />
+            <state relative-caret-position="141">
+              <caret line="45" column="10" selection-start-line="45" selection-start-column="10" selection-end-line="45" selection-end-column="10" />
               <folding>
                 <element signature="e#665#706#0" expanded="true" />
               </folding>
@@ -120,8 +106,8 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apps/organizations/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="16" column="39" lean-forward="true" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="39" />
+            <state relative-caret-position="183">
+              <caret line="30" column="37" lean-forward="true" selection-start-line="30" selection-start-column="37" selection-end-line="30" selection-end-column="37" />
               <folding>
                 <element signature="e#24#59#0" expanded="true" />
               </folding>
@@ -166,6 +152,7 @@
       <find>{% static %}</find>
       <find>..</find>
       <find>{% static '' %}</find>
+      <find>page_obj</find>
     </findStrings>
     <replaceStrings>
       <replace>/static/</replace>
@@ -211,13 +198,13 @@
         <option value="$PROJECT_DIR$/templates/password_reset.html" />
         <option value="$PROJECT_DIR$/apps/users/views.py" />
         <option value="$PROJECT_DIR$/templates/register.html" />
-        <option value="$PROJECT_DIR$/MxOnline/urls.py" />
         <option value="$PROJECT_DIR$/templates/base.html" />
         <option value="$PROJECT_DIR$/extra_apps/xadmin/plugins/themes.py" />
         <option value="$PROJECT_DIR$/apps/organizations/models.py" />
+        <option value="$PROJECT_DIR$/MxOnline/urls.py" />
+        <option value="$PROJECT_DIR$/MxOnline/settings.py" />
         <option value="$PROJECT_DIR$/apps/organizations/views.py" />
         <option value="$PROJECT_DIR$/templates/org-list.html" />
-        <option value="$PROJECT_DIR$/MxOnline/settings.py" />
       </list>
     </option>
   </component>
@@ -264,6 +251,11 @@
             <path>
               <item name="MxOnline" type="b2602c69:ProjectViewProjectNode" />
               <item name="MxOnline" type="462c0819:PsiDirectoryNode" />
+              <item name="extra_apps" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MxOnline" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MxOnline" type="462c0819:PsiDirectoryNode" />
               <item name="media" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -274,51 +266,6 @@
             <path>
               <item name="MxOnline" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-            </path>
-            <path>
-              <item name="MxOnline" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; Python 2.7 (py2mxonline) &gt;" type="70bed36:NamedLibraryElementNode" />
-            </path>
-            <path>
-              <item name="MxOnline" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; Python 2.7 (py2mxonline) &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="py2mxonline" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MxOnline" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; Python 2.7 (py2mxonline) &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="py2mxonline" type="462c0819:PsiDirectoryNode" />
-              <item name="Lib" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MxOnline" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; Python 2.7 (py2mxonline) &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="py2mxonline" type="462c0819:PsiDirectoryNode" />
-              <item name="Lib" type="462c0819:PsiDirectoryNode" />
-              <item name="site-packages" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MxOnline" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; Python 2.7 (py2mxonline) &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="py2mxonline" type="462c0819:PsiDirectoryNode" />
-              <item name="Lib" type="462c0819:PsiDirectoryNode" />
-              <item name="site-packages" type="462c0819:PsiDirectoryNode" />
-              <item name="django" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MxOnline" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; Python 2.7 (py2mxonline) &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="py2mxonline" type="462c0819:PsiDirectoryNode" />
-              <item name="Lib" type="462c0819:PsiDirectoryNode" />
-              <item name="site-packages" type="462c0819:PsiDirectoryNode" />
-              <item name="django" type="462c0819:PsiDirectoryNode" />
-              <item name="contrib" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -335,16 +282,17 @@
     <property name="settings.editor.selected.configurable" value="fileTemplates" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\CodingFiles\PycharmProjects\MxOnline\static" />
-      <recent name="D:\CodingFiles\PycharmProjects\MxOnline\templates" />
-      <recent name="D:\CodingFiles\PycharmProjects\MxOnline" />
-      <recent name="D:\CodingFiles\PycharmProjects\MxOnline\MxOnline" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\CodingFiles\PycharmProjects\MxOnline" />
       <recent name="D:\CodingFiles\PycharmProjects\MxOnline\extra_apps" />
       <recent name="D:\CodingFiles\PycharmProjects\MxOnline\apps" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\CodingFiles\PycharmProjects\MxOnline\extra_apps" />
+      <recent name="D:\CodingFiles\PycharmProjects\MxOnline\static" />
+      <recent name="D:\CodingFiles\PycharmProjects\MxOnline\templates" />
+      <recent name="D:\CodingFiles\PycharmProjects\MxOnline" />
+      <recent name="D:\CodingFiles\PycharmProjects\MxOnline\MxOnline" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -409,13 +357,13 @@
       <window_info anchor="bottom" id="Run" order="2" weight="0.35612082" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32838285" />
       <window_info anchor="right" id="Remote Host" order="3" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4250412" visible="true" weight="0.23373677" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4250412" visible="true" weight="0.23373677" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="right" id="SciView" order="3" />
       <window_info id="Structure" order="1" sideWeight="0.5749588" side_tool="true" weight="0.25718608" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.3580858" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.5066007" />
       <window_info active="true" anchor="bottom" id="manage.py@MxOnline" order="7" visible="true" weight="0.48514852" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -485,34 +433,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/apps/organizations/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="33" column="36" selection-start-line="33" selection-start-column="36" selection-end-line="33" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MxOnline/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1826">
-          <caret line="83" column="5" lean-forward="true" selection-start-line="83" selection-start-column="5" selection-end-line="83" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/PyVirtualEnvs/py2mxonline/Lib/site-packages/django/contrib/auth/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1397">
-          <caret line="296" column="6" selection-start-line="296" selection-start-column="6" selection-end-line="296" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/PyVirtualEnvs/py2mxonline/Lib/site-packages/django/core/management/base.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
-          <caret line="471" selection-start-line="471" selection-end-line="471" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/apps/operation/migrations/0001_initial.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1518" />
@@ -736,6 +656,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="215">
           <caret line="29" column="60" selection-start-line="29" selection-start-column="60" selection-end-line="29" selection-end-column="60" />
+          <folding>
+            <element signature="e#98#122#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -785,32 +708,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/users/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3212">
-          <caret line="155" selection-start-line="155" selection-end-line="155" />
-          <folding>
-            <element signature="e#24#59#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="10" selection-start-line="2" selection-end-line="2" selection-end-column="26" />
-          <folding>
-            <element signature="n#head#0;n#html#0;n#!!top" />
-            <element signature="n#section#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#block#3;n#!!top" />
-            <element signature="n#block#4;n#!!top" />
-            <element signature="n#footer#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#section#3;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#script#8;n#body#0;n#html#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/apps/users/adminx.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="924">
@@ -821,22 +718,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/extra_apps/xadmin/plugins/themes.py">
+    <entry file="file://$PROJECT_DIR$/MxOnline/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1716">
-          <caret line="88" column="73" selection-start-line="88" selection-start-column="73" selection-end-line="88" selection-end-column="73" />
+        <state relative-caret-position="141">
+          <caret line="45" column="10" selection-start-line="45" selection-start-column="10" selection-end-line="45" selection-end-column="10" />
           <folding>
-            <element signature="e#14#51#0" expanded="true" />
+            <element signature="e#665#706#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MxOnline/urls.py">
+    <entry file="file://$PROJECT_DIR$/apps/users/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="41" selection-start-line="41" selection-end-line="41" />
+        <state relative-caret-position="295">
+          <caret line="155" selection-start-line="155" selection-end-line="155" />
           <folding>
-            <element signature="e#665#706#0" expanded="true" />
+            <element signature="e#24#59#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -848,32 +745,75 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/organizations/views.py">
+    <entry file="file://$PROJECT_DIR$/extra_apps/xadmin/plugins/themes.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="16" column="39" lean-forward="true" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="39" />
+        <state relative-caret-position="512">
+          <caret line="88" column="73" selection-start-line="88" selection-start-column="73" selection-end-line="88" selection-end-column="73" />
           <folding>
-            <element signature="e#24#59#0" expanded="true" />
+            <element signature="e#14#51#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/org-list.html">
+    <entry file="file://$PROJECT_DIR$/extra_apps/captcha/conf/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/extra_apps/captcha/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/extra_apps/captcha/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="61" column="128" selection-start-line="61" selection-start-column="128" selection-end-line="61" selection-end-column="128" />
+        <state>
           <folding>
-            <element signature="n#block#1;n#!!top" />
+            <element signature="e#0#33#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/MxOnline/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="155" column="32" selection-start-line="155" selection-start-column="32" selection-end-line="155" selection-end-column="32" />
+        <state relative-caret-position="30">
+          <caret line="17" column="70" selection-start-line="17" selection-start-column="70" selection-end-line="17" selection-end-column="70" />
           <folding>
             <element signature="e#333#342#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="91">
+          <caret line="1067" selection-start-line="1067" selection-end-line="1067" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/organizations/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="30" column="37" lean-forward="true" selection-start-line="30" selection-start-column="37" selection-end-line="30" selection-end-column="37" />
+          <folding>
+            <element signature="e#24#59#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="2" column="10" selection-start-line="2" selection-end-line="2" selection-end-column="26" />
+          <folding>
+            <element signature="n#block#3;n#!!top" />
+            <element signature="n#block#4;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/org-list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="91" column="101" selection-start-line="91" selection-start-column="101" selection-end-line="91" selection-end-column="101" />
+          <folding>
+            <element signature="n#block#1;n#!!top" />
           </folding>
         </state>
       </provider>
