@@ -16,8 +16,8 @@ class BaseSettings(object):
 
 
 class GlobalSettings(object):
-    site_title = "幕学后台管理系统"
-    site_footer = "幕学在线网"
+    site_title = "慕学后台管理系统"
+    site_footer = "慕学在线网"
     menu_style = "accordion"
 
 
