@@ -84,6 +84,8 @@ class UserCourse(models.Model):
         verbose_name = "用户课程"
         verbose_name_plural = verbose_name
 
+    def __str__(self):
+        return self.user.username + " - " + self.course.name
 
 
 

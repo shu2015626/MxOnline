@@ -1,5 +1,5 @@
 
-{% extends 'org_list_base.html' %}
+{% extends 'base.html' %}
 {% load staticfiles %}
 {% block title %}课程机构列表 - 慕学在线网{% endblock %}
 {% block custom_bread %}
@@ -83,7 +83,7 @@
                         {% endfor %}
                     </div>
                 </div>
-                 <div class="pageturn">
+                    <div class="pageturn">
                     <ul class="pagelist">
                         {% if all_orgs.has_previous %}
                             <li class="long"><a href="?{{ all_orgs.previous_page_number.querystring }}">上一页</a></li>
