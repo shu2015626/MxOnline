@@ -3,6 +3,7 @@ from django.shortcuts import render
 from django.views.generic.base import View
 from django.http import HttpResponse
 from pure_pagination import Paginator, EmptyPage, PageNotAnInteger
+from django.db.models import Q
 
 from .models import CourseOrg, CityDict
 from .models import Teacher
@@ -23,6 +24,12 @@ class OrgView(View):
 
         # 机构排序，根据点击数
         hot_orgs = all_orgs.order_by("-click_nums")[:3]
+
+        # 机构全局搜索功能
+        search_keywords = request.GET.get('keywords', "")
+        if search_keywords:
+            # 参数name__icontains会被django转化为类似like的查询。其中参数icontains的首个i表示忽略大小写
+            all_orgs = all_orgs.filter(Q(name__icontains=search_keywords)|Q(desc__icontains=search_keywords))
 
         # 城市筛选
         city_id = request.GET.get('city', '')
@@ -199,6 +206,14 @@ class TeacherListView(View):
     """
     def get(self, request):
         all_teachers = Teacher.objects.all()
+
+        # 讲师全局搜索功能
+        search_keywords = request.GET.get('keywords', "")
+        if search_keywords:
+            # 参数name__icontains会被django转化为类似like的查询。其中参数icontains的首个i表示忽略大小写
+            all_teachers = all_teachers.filter(Q(name__icontains=search_keywords) |
+                                               Q(work_company__icontains=search_keywords) |
+                                               Q(work_position__icontains=search_keywords))
 
         sort = request.GET.get('sort', '')
         if sort:

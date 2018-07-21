@@ -3,6 +3,7 @@ from django.shortcuts import render
 from django.views.generic.base import View
 from pure_pagination import Paginator, EmptyPage, PageNotAnInteger
 from django.http import HttpResponse
+from django.db.models import Q
 
 from .models import Course, CourseResource, Video
 from operation.models import UserFavorite, CourseComments, UserCourse
@@ -17,6 +18,13 @@ class CourseListView(View):
 
         # 热门课程推荐
         hot_courses = Course.objects.all().order_by("-click_nums")[:3]
+
+        # 课程全局搜索功能
+        search_keywords = request.GET.get('keywords', "")
+        if search_keywords:
+            # 参数name__icontains会被django转化为类似like的查询。其中参数icontains的首个i表示忽略大小写
+            all_courses = all_courses.filter(Q(name__icontains=search_keywords)|Q(desc__icontains=search_keywords)|Q(detail__icontains=search_keywords))
+
 
         sort = request.GET.get('sort', "")
         if sort:
