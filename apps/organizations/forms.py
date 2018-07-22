@@ -30,7 +30,7 @@ class UserAskForm(forms.ModelForm):
         model = UserAsk
         fields = ['name', 'mobile', 'course_name']
 
-    # 自定义方法对我们的字段进行验证，而不是使用默认的函数
+    # 重写我们的字段验证方法，而不是使用默认的函数
     def clean_mobile(self):
         """
         验证手机号码是否合法
