@@ -80,6 +80,9 @@ class Teacher(models.Model):
         else:
             return 0
 
+    def get_course_nums(self):
+        return self.course_set.all().count()
+
     def __str__(self):
         return self.name
 

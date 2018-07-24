@@ -13,7 +13,8 @@ from .forms import LoginForm, RegisterForm, ForgetForm, ModifyPwdForm
 from .forms import UploadImageForm, UserInfoForm
 from utils.email_send import send_register_email
 from utils.mixin_utils import LoginRequiredMixin
-
+from operation.models import UserCourse, UserFavorite
+from organizations.models import CourseOrg, Teacher
 
 # Create your views here.
 class CustomBackend(ModelBackend):
@@ -269,4 +270,44 @@ class UpdateEmailView(LoginRequiredMixin, View):
             return HttpResponse('{"email":"验证码出错"}', content_type="application/json")
 
 
+class MyCourseView(LoginRequiredMixin, View):
+    """
+    我的课程
+    """
+    def get(self, request):
+        user_courses = UserCourse.objects.filter(user=request.user)
+        return render(request, 'usercenter-mycourse.html', {
+            "user_courses": user_courses,
+        })
 
+
+class MyFavOrgView(LoginRequiredMixin, View):
+    """
+    我收藏的课程机构
+    """
+    def get(self, request):
+        org_list = []
+        fav_orgs = UserFavorite.objects.filter(user=request.user, fav_type=2)
+        for fav_org in fav_orgs:
+            org_id = fav_org.fav_id
+            org = CourseOrg.objects.get(id=org_id)
+            org_list.append(org)
+        return render(request, 'usercenter-fav-org.html', {
+            "org_list": org_list,
+        })
+
+
+class MyFavTeacherView(LoginRequiredMixin, View):
+    """
+    我收藏的授课讲师
+    """
+    def get(self, request):
+        teacher_list = []
+        fav_teachers = UserFavorite.objects.filter(user=request.user, fav_type=3)
+        for fav_teacher in fav_teachers:
+            teacher_id = fav_teacher.fav_id
+            teacher = Teacher.objects.get(id=teacher_id)
+            teacher_list.append(teacher)
+        return render(request, 'usercenter-fav-teacher.html', {
+            "teacher_list": teacher_list,
+        })
