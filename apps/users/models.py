@@ -23,6 +23,12 @@ class UserProfile(AbstractUser):
         verbose_name = "用户信息"
         verbose_name_plural = verbose_name
 
+    def get_unread_msg_nums(self):
+        """获取用户未读消息的数量"""
+        # 这里必须在这里引用，否则会造成循环引用
+        from operation.models import UserMessage
+        return UserMessage.objects.filter(user=self.id).count()
+
     def __str__(self):
         return self.username
 

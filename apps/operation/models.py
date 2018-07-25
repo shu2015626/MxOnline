@@ -71,6 +71,9 @@ class UserMessage(models.Model):
         verbose_name = "用户消息"
         verbose_name_plural = verbose_name
 
+    def __str__(self):
+        return 'id为{}的用户有一条消息未读'.format(self.user)
+
 
 class UserCourse(models.Model):
     """
