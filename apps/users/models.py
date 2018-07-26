@@ -27,7 +27,7 @@ class UserProfile(AbstractUser):
         """获取用户未读消息的数量"""
         # 这里必须在这里引用，否则会造成循环引用
         from operation.models import UserMessage
-        return UserMessage.objects.filter(user=self.id).count()
+        return UserMessage.objects.filter(user=self.id, has_read=False).count()
 
     def __str__(self):
         return self.username

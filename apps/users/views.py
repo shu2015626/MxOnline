@@ -2,12 +2,12 @@
 import json
 
 from django.shortcuts import render
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.backends import ModelBackend
 from django.contrib.auth.hashers import make_password
 from django.db.models import Q
 from django.views.generic.base import View
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect
 from pure_pagination import Paginator, PageNotAnInteger, EmptyPage
 
 from .models import UserProfile, EmailVerifyRecord
@@ -88,6 +88,16 @@ class RegisterView(View):
             return render(request, 'login.html')
         else:
             return render(request, "register.html", {"register_form": register_form})
+
+
+class LogoutView(View):
+    """
+    用户登出
+    """
+    def get(self, request):
+        logout(request)
+        from django.core.urlresolvers import reverse
+        return HttpResponseRedirect(reverse("index"))
 
 
 class ActiveUserView(View):
@@ -344,6 +354,12 @@ class MyMessageView(LoginRequiredMixin, View):
     """
     def get(self, request):
         all_messages = UserMessage.objects.filter(Q(user=0) | Q(user=request.user.id))
+
+        # 用户进入个人消息后，清空未读消息的记录
+        all_unread_messages = UserMessage.objects.filter(user=request.user.id, has_read=False)
+        for unread_message in all_unread_messages:
+            unread_message.has_read = True
+            unread_message.save()
 
         # 对个人消息进行分页
         try:

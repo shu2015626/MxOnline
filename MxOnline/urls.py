@@ -21,7 +21,7 @@ import xadmin
 from django.views.static import serve
 
 from users.views import (user_login, LoginView, RegisterView, ActiveUserView, ForgetPwdView,
-                         ResetView, ModifyPwdView)
+                         ResetView, ModifyPwdView, LogoutView)
 from organizations.views import OrgView
 from MxOnline.settings import MEDIA_ROOT
 
@@ -33,6 +33,7 @@ urlpatterns = [
     # url('^login/$', user_login, name="login"),
     url('^register/$', RegisterView.as_view(), name="register"),
     url('^login/$', LoginView.as_view(), name="login"),
+    url('^logout/$', LogoutView.as_view(), name="logout"),
     url(r'^captcha/', include('captcha.urls')),
     url(r'^active/(?P<active_code>.*)/$', ActiveUserView.as_view(), name="user_active"),
     url(r'^forget/$', ForgetPwdView.as_view(), name="forget_pwd"),
