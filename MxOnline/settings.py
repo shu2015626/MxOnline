@@ -26,9 +26,9 @@ sys.path.insert(0, os.path.join(BASE_DIR, "apps"))
 SECRET_KEY = 'ye-g#vr16!i%v_qbd@)sdt!)4f1jad&xk2ppi@5j(_pn@pp55$'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -161,4 +161,6 @@ EMAIL_FROM = EMAIL_HOST_USER
 # 资源文件的配置
 MEDIA_URL = "/media/"
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
