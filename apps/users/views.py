@@ -93,15 +93,6 @@ class RegisterView(View):
             return render(request, "register.html", {"register_form": register_form})
 
 
-class LogoutView(View):
-    """
-    用户登出
-    """
-    def get(self, request):
-        logout(request)
-        return HttpResponseRedirect(reverse("index"))
-
-
 class ActiveUserView(View):
     def get(self, request, active_code):
         all_records = EmailVerifyRecord.objects.filter(code=active_code)
@@ -114,6 +105,15 @@ class ActiveUserView(View):
         else:
             return render(request, "active_fail.html")
         return render(request, "login.html")
+
+
+class LogoutView(View):
+    """
+    用户登出
+    """
+    def get(self, request):
+        logout(request)
+        return HttpResponseRedirect(reverse("index"))
 
 
 class LoginView(View):
@@ -142,6 +142,34 @@ class LoginView(View):
                 return render(request, "login.html", {"msg": "用户名或密码错误"})
         else:
             return render(request, "login.html", {"login_form": login_form})
+
+
+# # sql注入示例
+# class LoginUnsafeView(View):
+#     """测试一种不安全的登录-->sql注入"""
+#     def get(self, request):
+#         return render(request, "login.html", {})
+#
+#     def post(self, request):
+#         """
+#         当用户名传入' OR 1=1#时（密码随意），
+#         下面的语句便拿到了所有的用户数据
+#         """
+#         user_name = request.POST.get("username", "")
+#         pass_word = request.POST.get("password", "")
+#
+#         import MySQLdb
+#         # charset参数的utf8编码不需要横杠
+#         conn = MySQLdb.connect(host='127.0.0.1', user='root', passwd='sunsn100829', db='mxonline', charset='utf8')
+#         cursor = conn.cursor()
+#         sql_select = "select * from users_userprofile where email='{0}' and password='{1}' ".format(user_name, pass_word)
+#
+#         result = cursor.execute(sql_select)
+#         for row in cursor.fetchall():
+#             # 查询到用户,下面就是做登录操作了
+#             pass
+#
+#         print("test sql注入")
 
 
 class ForgetPwdView(View):

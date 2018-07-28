@@ -26,13 +26,13 @@ sys.path.insert(0, os.path.join(BASE_DIR, "apps"))
 SECRET_KEY = 'ye-g#vr16!i%v_qbd@)sdt!)4f1jad&xk2ppi@5j(_pn@pp55$'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
 
 # Application definition
-# 配置，模板是django支持email登录而不只是用户名
+# 配置，模板使django支持email登录而不只是用户名
 AUTHENTICATION_BACKENDS = (
     'users.views.CustomBackend',
 )
@@ -100,8 +100,8 @@ DATABASES = {
         'USER': 'root',
         'PASSWORD': 'sunsn100829',
         'HOST': '127.0.0.1',
-        'OPTIONS':{
-                "init_command":"SET foreign_key_checks = 0;",
+        'OPTIONS': {
+                "init_command": "SET foreign_key_checks = 0;",
         }
     }
 }
@@ -162,5 +162,5 @@ EMAIL_FROM = EMAIL_HOST_USER
 MEDIA_URL = "/media/"
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 

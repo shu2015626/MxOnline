@@ -20,10 +20,12 @@ from django.views.generic import TemplateView
 import xadmin
 from django.views.static import serve
 
-from users.views import (user_login, LoginView, RegisterView, ActiveUserView, ForgetPwdView,
+from users.views import (LoginView, RegisterView, ActiveUserView, ForgetPwdView,
                          ResetView, ModifyPwdView, LogoutView, IndexView)
+# from users.views import user_login, LoginUnsafeView
 from organizations.views import OrgView
-from MxOnline.settings import MEDIA_ROOT, STATIC_ROOT
+from MxOnline.settings import MEDIA_ROOT
+# from MxOnline.settings import STATIC_ROOT
 
 urlpatterns = [
     # url(r'^admin/', admin.site.urls),
@@ -34,6 +36,8 @@ urlpatterns = [
     # url('^login/$', user_login, name="login"),
     url('^register/$', RegisterView.as_view(), name="register"),
     url('^login/$', LoginView.as_view(), name="login"),
+    # url('^login/$', LoginUnsafeView.as_view(), name="login"),
+
     url('^logout/$', LogoutView.as_view(), name="logout"),
     url(r'^captcha/', include('captcha.urls')),
     url(r'^active/(?P<active_code>.*)/$', ActiveUserView.as_view(), name="user_active"),
@@ -53,7 +57,7 @@ urlpatterns = [
     # 用户相关url配置
     url(r'user/', include('users.urls', namespace='user')),
 
-    url(r'static/(?P<path>.*)$', serve, {"document_root": STATIC_ROOT}),
+    # url(r'static/(?P<path>.*)$', serve, {"document_root": STATIC_ROOT}),
 
 ]
 

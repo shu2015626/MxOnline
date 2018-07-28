@@ -16,6 +16,10 @@ class CourseAdmin(object):
     list_display = ['name', 'desc', 'detail', 'degree', 'learn_times', 'students', 'fav_nums', 'image', 'click_nums', 'add_time']
     search_fields = ['name', 'desc', 'detail', 'degree', 'learn_times', 'students', 'fav_nums', 'image', 'click_nums']
     list_filter = ['name', 'desc', 'detail', 'degree', 'learn_times', 'students', 'fav_nums', 'image', 'click_nums', 'add_time']
+    ordering = ['-click_nums']
+    # 需要注意的是readonly_fields和exclude是冲突的，如果一个字段出现在了readonly_fields属性中，那么即使设置了exclude也是无效的
+    readonly_fields = ['click_nums']  # 后台不能修改click_nums的值
+    exclude = ['fav_nums']  # 后台不显示fav_nums的值
 
 
 class LessonAdmin(object):
