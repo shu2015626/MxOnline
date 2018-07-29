@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     'crispy_forms',
     'captcha',
     'pure_pagination',
+    'DjangoUeditor',
 ]
 AUTH_USER_MODEL = 'users.UserProfile'  # 这里直接是app的名称加类名（没有那个models模块名）
 
